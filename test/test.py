@@ -4,5 +4,5 @@ csv_preprocessor = CSVTimeSeriesPreprocessor("../data/generated_data/synthetic_t
 
 csv_preprocessor.load_data()
 csv_preprocessor.normalize_data()
-csv_preprocessor.handle_missing_values(dropna=True)
+csv_preprocessor.handle_missing_values()
 csv_preprocessor.trend_analysis()

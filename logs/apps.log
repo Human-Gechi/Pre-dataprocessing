@@ -1,4 +1,4 @@
-2025-08-03 00:20:59 - logs.custom_logger - DEBUG - Loading the dataset from../data/generated_data/synthetic_timeseries.csv
-2025-08-03 00:20:59 - logs.custom_logger - DEBUG - Normalizing Data to DAILY
-2025-08-03 00:20:59 - logs.custom_logger - DEBUG - Handling missing values
-2025-08-03 00:20:59 - logs.custom_logger - INFO - Missing values handled!
+2025-08-03 07:07:55 - logs.custom_logger - DEBUG - Loading the dataset from../data/generated_data/synthetic_timeseries.csv
+2025-08-03 07:07:55 - logs.custom_logger - DEBUG - Normalizing Data to DAILY
+2025-08-03 07:07:55 - logs.custom_logger - DEBUG - Handling missing values
+2025-08-03 07:07:55 - logs.custom_logger - INFO - Missing values handled!

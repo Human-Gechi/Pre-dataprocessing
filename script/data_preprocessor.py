@@ -32,7 +32,7 @@ class TimeSeriesPreprocessor(ABC):
         pass
     
     @abstractmethod
-    def handle_missing_values(self, target_col=None, dropna=False, axis=0, constant=None, strategy="mean"):
+    def handle_missing_values(self):
        """Custom missing value handler"""
     pass
 
@@ -56,18 +56,24 @@ class CSVTimeSeriesPreprocessor(TimeSeriesPreprocessor):
         print("<------------ Data Statistics ------------->")
         print(self.df.describe(include="all"))
     
-    def handle_missing_values(self, target_col=None, dropna=False, axis=0, constant=None, strategy="mean") -> pd.DataFrame:
+    def handle_missing_values(self) -> pd.DataFrame:
         logger.debug("Handling missing values")
-        if dropna:
-            self.df.dropna(axis=axis, inplace=True)
-        elif strategy == "mean":
-            self.df[target_col].fillna(self.df[target_col].mean(), inplace=True)
-        elif strategy == "median":
-            self.df[target_col].fillna(self.df[target_col].median(), inplace=True)
-        elif strategy == "max":
-            self.df[target_col].fillna(self.df[target_col].max(), inplace=True)
-        elif strategy == "constant" and constant is not None:
-            self.df[target_col].fillna(constant, inplace=True)
+        """ Performs missing value imputation on dataframe.
+         :returns: a dataframe with missing values imputed using median or mode imputation.
+              """
+        for column in self.df.columns:
+            null_sum = self.df[column].isnull().sum()
+            null_percent = null_sum / len(self.df)
+            # Drop columns with 75% missing values
+            if null_percent > 0.75:
+                self.df.drop([column], axis=1, inplace=True)
+            else:
+                # Impute NaN values with either mode or mean values.
+                """ Using mode fill for categorical columns is to handle multi-class columns """
+                if self.df[column].dtype.name == "object" or self.df[column].dtype.name == "category":
+                    self.df[column].fillna(self.df[column].mode()[0], inplace=True)
+                elif self.df[column].dtype.name == "float64" or self.df[column].dtype.name == "int64":
+                    self.df[column].fillna(self.df[column].median(), inplace=True)
         logger.info("Missing values handled!")
         return self.df
 
@@ -92,18 +98,24 @@ class ExcelTimeSeriesPreprocessor(TimeSeriesPreprocessor):
         print("<------------ Data Statistics ------------->")
         print(self.df.describe(include="all"))
     
-    def handle_missing_values(self, target_col=None, dropna=False, axis=0, constant=None, strategy="mean"):
+    def handle_missing_values(self):
         logger.debug("Handling missing values")
-        if dropna:
-            self.df.dropna(axis=axis, inplace=True)
-        elif strategy == "mean":
-            self.df[target_col].fillna(self.df[target_col].mean(), inplace=True)
-        elif strategy == "median":
-            self.df[target_col].fillna(self.df[target_col].median(), inplace=True)
-        elif strategy == "max":
-            self.df[target_col].fillna(self.df[target_col].max(), inplace=True)
-        elif strategy == "constant" and constant is not None:
-            self.df[target_col].fillna(constant, inplace=True)
+        """ Performs missing value imputation on dataframe.
+            :returns: a dataframe with missing values imputed using median or mode imputation.
+            """
+        for column in self.df.columns:
+            null_sum = self.df[column].isnull().sum()
+            null_percent = null_sum / len(self.df)
+            # Drop columns with 75% missing values
+            if null_percent > 0.75:
+                self.df.drop([column], axis=1, inplace=True)
+            else:
+                # Impute NaN values with either mode or mean values.
+                """ Using mode fill for categorical columns is to handle multi-class columns """
+                if self.df[column].dtype.name == "object" or self.df[column].dtype.name == "category":
+                    self.df[column].fillna(self.df[column].mode()[0], inplace=True)
+                elif self.df[column].dtype.name == "float64" or self.df[column].dtype.name == "int64":
+                    self.df[column].fillna(self.df[column].median(), inplace=True)
         logger.info("Missing Values handled!")
 
 
@@ -131,16 +143,22 @@ class JSONTimeSeriesPreprocessor(TimeSeriesPreprocessor):
     
     def handle_missing_values(self, target_col=None, dropna=False, axis=0, constant=None, strategy="mean"):
         logger.debug("Handling missing values")
-        if dropna:
-            self.df.dropna(axis=axis, inplace=True)
-        elif strategy == "mean":
-            self.df[target_col].fillna(self.df[target_col].mean(), inplace=True)
-        elif strategy == "median":
-            self.df[target_col].fillna(self.df[target_col].median(), inplace=True)
-        elif strategy == "max":
-            self.df[target_col].fillna(self.df[target_col].max(), inplace=True)
-        elif strategy == "constant" and constant is not None:
-            self.df[target_col].fillna(constant, inplace=True)
+        """ Performs missing value imputation on dataframe.
+            :returns: a dataframe with missing values imputed using median or mode imputation.
+             """
+        for column in self.df.columns:
+            null_sum = self.df[column].isnull().sum()
+            null_percent = null_sum / len(self.df)
+            # Drop columns with 75% missing values
+            if null_percent > 0.75:
+                self.df.drop([column], axis=1, inplace=True)
+            else:
+                # Impute NaN values with either mode or mean values.
+                """ Using mode fill for categorical columns is to handle multi-class columns """
+                if self.df[column].dtype.name == "object" or self.df[column].dtype.name == "category":
+                    self.df[column].fillna(self.df[column].mode()[0], inplace=True)
+                elif self.df[column].dtype.name == "float64" or self.df[column].dtype.name == "int64":
+                    self.df[column].fillna(self.df[column].median(), inplace=True)
         logger.info("Missing Values handled!")
 
 class ParquetTimeSeriesPreprocessor(TimeSeriesPreprocessor):
@@ -167,14 +185,20 @@ class ParquetTimeSeriesPreprocessor(TimeSeriesPreprocessor):
     
     def handle_missing_values(self, target_col=None, dropna=False, axis=0, constant=None, strategy="mean"):
         logger.debug("Handling Missing Values")
-        if dropna:
-            self.df.dropna(axis=axis, inplace=True)
-        elif strategy == "mean":
-            self.df[target_col].fillna(self.df[target_col].mean(), inplace=True)
-        elif strategy == "median":
-            self.df[target_col].fillna(self.df[target_col].median(), inplace=True)
-        elif strategy == "max":
-            self.df[target_col].fillna(self.df[target_col].max(), inplace=True)
-        elif strategy == "constant" and constant is not None:
-            self.df[target_col].fillna(constant, inplace=True)
+        """ Performs missing value imputation on dataframe.
+             :returns: a dataframe with missing values imputed using median or mode imputation.
+             """
+        for column in self.df.columns:
+            null_sum = self.df[column].isnull().sum()
+            null_percent = null_sum / len(self.df)
+            # Drop columns with 75% missing values
+            if null_percent > 0.75:
+                self.df.drop([column], axis=1, inplace=True)
+            else:
+                # Impute NaN values with either mode or mean values.
+                """ Using mode fill for categorical columns is to handle multi-class columns """
+                if self.df[column].dtype.name == "object" or self.df[column].dtype.name == "category":
+                    self.df[column].fillna(self.df[column].mode()[0], inplace=True)
+                elif self.df[column].dtype.name == "float64" or self.df[column].dtype.name == "int64":
+                    self.df[column].fillna(self.df[column].median(), inplace=True)
         logger.info("Missing Values handled!")
