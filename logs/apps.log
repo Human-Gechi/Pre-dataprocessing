@@ -1,0 +1,96 @@
+2025-08-03 23:19:00,548 - INFO - Logger is working from a sibling folder!
+2025-08-03 23:19:00,548 - INFO - Summary stat csv file created successfully
+2025-08-03 23:19:14,170 - INFO - Data loades successfully
+2025-08-03 23:22:06,166 - INFO - Logger is working from a sibling folder!
+2025-08-03 23:22:06,166 - INFO - Summary stat csv file created successfully
+2025-08-03 23:22:08,529 - INFO - Data loaded successfully
+2025-08-03 23:24:14,300 - INFO - Logger is working from a sibling folder!
+2025-08-03 23:24:14,300 - INFO - Summary stat csv file created successfully
+2025-08-03 23:24:23,356 - INFO - Data loaded successfully
+2025-08-03 23:26:19,043 - INFO - Logger is working from a sibling folder!
+2025-08-03 23:26:19,043 - INFO - Summary stat csv file created successfully
+2025-08-03 23:26:21,380 - INFO - Data loaded successfully
+2025-08-03 23:28:02,584 - INFO - Logger is working from a sibling folder!
+2025-08-03 23:28:02,584 - INFO - Summary stat csv file created successfully
+2025-08-03 23:28:17,821 - INFO - Data loaded successfully
+2025-08-03 23:29:25,205 - INFO - Logger is working from a sibling folder!
+2025-08-03 23:29:25,205 - INFO - Summary stat csv file created successfully
+2025-08-03 23:29:44,975 - INFO - Logger is working from a sibling folder!
+2025-08-03 23:29:44,975 - INFO - Summary stat csv file created successfully
+2025-08-03 23:29:47,143 - INFO - Data loaded successfully
+2025-08-03 23:34:55,697 - INFO - Data loaded successfully
+2025-08-03 23:37:57,459 - INFO - Data loaded successfully
+2025-08-03 23:39:52,228 - INFO - Data loaded successfully
+2025-08-03 23:39:54,070 - INFO - Removed 3 duplicate rows.
+2025-08-03 23:40:40,918 - INFO - Data loaded successfully
+2025-08-03 23:40:43,663 - INFO - Removed 3 duplicate rows.
+2025-08-03 23:40:54,694 - INFO - Cleaned data saved to join.csv
+2025-08-03 23:42:11,043 - INFO - Data loaded successfully
+2025-08-03 23:43:03,049 - INFO - Data loaded successfully
+2025-08-03 23:43:04,827 - INFO - Removed 3 duplicate rows.
+2025-08-03 23:44:21,757 - INFO - Data loaded successfully
+2025-08-03 23:44:23,409 - INFO - Removed 3 duplicate rows.
+2025-08-03 23:44:36,706 - INFO - Data loaded successfully
+2025-08-03 23:44:37,961 - INFO - Removed 3 duplicate rows.
+2025-08-03 23:45:42,097 - INFO - Data loaded successfully
+2025-08-03 23:45:59,336 - INFO - Data loaded successfully
+2025-08-03 23:46:01,111 - INFO - Removed 3 duplicate rows.
+2025-08-03 23:46:16,583 - INFO - Data loaded successfully
+2025-08-03 23:46:17,869 - INFO - Removed 3 duplicate rows.
+2025-08-03 23:47:52,904 - INFO - Data loaded successfully
+2025-08-03 23:47:55,269 - INFO - Removed 0 duplicate rows.
+2025-08-03 23:51:15,587 - INFO - Data loaded successfully
+2025-08-03 23:53:50,487 - INFO - Data loaded successfully
+2025-08-03 23:56:11,052 - INFO - Data loaded successfully
+2025-08-03 23:57:42,600 - INFO - Data loaded successfully
+2025-08-03 23:59:17,469 - INFO - Data loaded successfully
+2025-08-04 00:00:44,596 - INFO - Data loaded successfully
+2025-08-04 00:01:03,801 - INFO - Data loaded successfully
+2025-08-04 00:04:01,687 - INFO - Data loaded successfully
+2025-08-04 00:04:20,196 - INFO - Data loaded successfully
+2025-08-04 00:05:45,823 - INFO - Data loaded successfully
+2025-08-04 00:06:15,424 - INFO - Data loaded successfully
+2025-08-04 00:06:30,020 - INFO - Data loaded successfully
+2025-08-04 00:06:44,829 - INFO - Removed 0 duplicate rows.
+2025-08-04 00:07:45,663 - INFO - Data loaded successfully
+2025-08-04 00:07:47,803 - INFO - Removed 3 duplicate rows.
+2025-08-04 00:09:22,123 - INFO - Data loaded successfully
+2025-08-04 00:10:20,559 - INFO - Data loaded successfully
+2025-08-04 00:10:49,102 - INFO - Data loaded successfully
+2025-08-04 00:11:10,831 - INFO - Data loaded successfully
+2025-08-04 00:13:47,503 - INFO - Data loaded successfully
+2025-08-04 00:14:36,870 - INFO - Data loaded successfully
+2025-08-04 00:15:58,113 - INFO - Data loaded successfully
+2025-08-04 00:19:59,602 - INFO - Data loaded successfully
+2025-08-04 00:21:48,827 - INFO - Data loaded successfully
+2025-08-04 00:26:31,427 - INFO - Data loaded successfully
+2025-08-04 00:27:47,209 - INFO - Data loaded successfully
+2025-08-04 00:28:26,725 - INFO - Data loaded successfully
+2025-08-04 00:28:47,614 - INFO - Data loaded successfully
+2025-08-04 00:29:16,046 - INFO - Data loaded successfully
+2025-08-04 00:30:15,956 - INFO - Data loaded successfully
+2025-08-04 00:31:24,283 - INFO - Data loaded successfully
+2025-08-04 00:33:06,117 - INFO - Data loaded successfully
+2025-08-04 00:36:04,516 - INFO - Data loaded successfully
+2025-08-04 00:38:00,022 - INFO - Data loaded successfully
+2025-08-04 00:38:42,880 - INFO - Data loaded successfully
+2025-08-04 00:40:04,943 - INFO - Data loaded successfully
+2025-08-04 00:43:42,500 - INFO - Data loaded successfully
+2025-08-04 00:44:14,690 - INFO - Data loaded successfully
+2025-08-04 00:46:50,074 - INFO - Data loaded successfully
+2025-08-04 00:50:24,946 - INFO - Data loaded successfully
+2025-08-04 00:51:47,534 - INFO - Data loaded successfully
+2025-08-04 00:53:19,641 - INFO - Data loaded successfully
+2025-08-04 00:55:01,714 - INFO - Data loaded successfully
+2025-08-04 00:56:08,082 - INFO - Data loaded successfully
+2025-08-05 01:27:46,232 - INFO - Data loaded successfully
+2025-08-05 01:29:18,961 - INFO - Data loaded successfully
+2025-08-05 01:32:37,685 - INFO - Data loaded successfully
+2025-08-05 01:38:07,079 - INFO - Data loaded successfully
+2025-08-05 01:41:06,361 - INFO - Data loaded successfully
+2025-08-05 01:43:02,379 - INFO - Data loaded successfully
+2025-08-05 01:47:57,823 - INFO - Data loaded successfully
+2025-08-05 01:48:26,775 - INFO - Data cleaned successfully and saved to C:\Users\HP\OneDrive\Desktop\dataprocessing\data\generated_time_series_data.csv.
+2025-08-05 01:49:05,453 - INFO - Data cleaned successfully and saved to C:\Users\HP\OneDrive\Desktop\dataprocessing\data\generated_time_series_data.csv.
+2025-08-05 01:49:25,467 - INFO - Data cleaned successfully and saved to C:\Users\HP\OneDrive\Desktop\dataprocessing\data\generated_time_series_data.csv.
+2025-08-05 01:49:41,729 - INFO - Data cleaned successfully and saved to C:\Users\HP\OneDrive\Desktop\dataprocessing\data\generated_time_series_data.csv.
