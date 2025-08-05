@@ -100,6 +100,9 @@ class DataPreprocessor:
         after = len(self.data)
         print(f"Removed {before - after} duplicate rows.")
         logger.info(f"Removed {before - after} duplicate rows.")
+        if self.data.empty:
+            print("No data left after removing duplicates.")
+            return
         if filename:
             self.data.to_csv(filename, index=False)
         logger.info(f"Duplicated data has been removed successfully and saved to {filename}.")
