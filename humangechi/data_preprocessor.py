@@ -7,7 +7,7 @@ import pandas as pd
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from logs.custom_logger import logger
 
-#Definfing the DataPreprocessor class
+#Defining the DataPreprocessor class
 # This class handles the loading, cleaning, and preprocessing of data files.
 class DataPreprocessor:
     def __init__(self, data):
